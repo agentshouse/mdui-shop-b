@@ -1,0 +1,54 @@
+[
+  {
+    "name": "@radix-ui/react-compose-refs",
+    "version": "1.1.2",
+    "license": "MIT",
+    "file": "licenses/dependency-radix-ui-react-compose-refs-1.1.2-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+    "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+    "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+    "metadataSource": "https://registry.npmjs.org/@radix-ui/react-compose-refs/1.1.2"
+  },
+  {
+    "name": "@radix-ui/react-use-layout-effect",
+    "version": "1.1.1",
+    "license": "MIT",
+    "file": "licenses/dependency-radix-ui-react-use-layout-effect-1.1.1-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+    "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+    "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+    "metadataSource": "https://registry.npmjs.org/@radix-ui/react-use-layout-effect/1.1.1"
+  },
+  {
+    "name": "popper.js",
+    "version": "1.16.1-lts",
+    "license": "MIT",
+    "file": "licenses/dependency-popper.js-1.16.1-lts-LICENSE.txt",
+    "source": "node_modules/popper.js/dist/esm/popper.js first license comment",
+    "sha256": "15f45abc9010eec0826f5448bce0f32bb69bcdcabfe9148e879d1babb6f6d38f"
+  },
+  {
+    "name": "is-in-browser",
+    "version": "1.1.3",
+    "license": "MIT",
+    "file": "licenses/dependency-is-in-browser-1.1.3-LICENSE.txt",
+    "source": "https://github.com/tuxsudo/is-in-browser/blob/653d0586c8d40db93262536ec60a4d2d50f3d78d/package.json",
+    "gitHead": "653d0586c8d40db93262536ec60a4d2d50f3d78d",
+    "metadataSource": "https://registry.npmjs.org/is-in-browser/1.1.3",
+    "standardLicenseSource": "https://raw.githubusercontent.com/spdx/license-list-data/main/json/details/MIT.json",
+    "noticeBasis": "Exact package license declaration; no upstream standalone copyright/license file; standard MIT text with original template line, package author attributed separately",
+    "sha256": "50092e49f6dd21f466f589f89082eca908362c61d7f4690be6efd8c9ae7c73b2"
+  },
+  {
+    "name": "react-easy-swipe",
+    "version": "0.0.21",
+    "license": "MIT",
+    "file": "licenses/dependency-react-easy-swipe-0.0.21-LICENSE.txt",
+    "source": "https://github.com/leandrowd/react-easy-swipe/blob/e016d64710e9780403c9aaa01705535966e214b5/package.json",
+    "gitHead": "e016d64710e9780403c9aaa01705535966e214b5",
+    "metadataSource": "https://registry.npmjs.org/react-easy-swipe/0.0.21",
+    "standardLicenseSource": "https://raw.githubusercontent.com/spdx/license-list-data/main/json/details/MIT.json",
+    "noticeBasis": "Exact package license declaration; no upstream standalone copyright/license file; standard MIT text with original template line, package author attributed separately",
+    "sha256": "e491f4a0cfd55c21e75e4edff9480c9ed7d8ff90402f6858ef35586caf85ee8c"
+  }
+]

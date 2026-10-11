@@ -10,7 +10,7 @@ const initial=[
 export function draftBoundary(){
   let state:unknown={};let revision=0;let race:(()=>void)|undefined;let available=true;let refusal:string|undefined;
   const drafts=new Map<string,Draft>();const listeners=new Set<(values:readonly Draft[])=>void>();
-  const documents=initial.map(([resource,fields])=>({room:'r',path:`shop/${resource}/${fields.id}.md`,type:`shop_${resource==='categories'?'category':resource==='products'?'product':'customer'}`,fields:{...fields} as Record<string,unknown>,markdown:JSON.stringify(fields)}));
+  const documents=initial.map(([resource,fields])=>({room:'r',path:`shop/${resource}/${fields.id}.md`,type:`shop_${resource==='categories'?'category':resource==='products'?'product':'customer'}`,fields:{type:`shop_${resource==='categories'?'category':resource==='products'?'product':'customer'}`,...fields} as Record<string,unknown>,markdown:JSON.stringify(fields)}));
   const publish=()=>{for(const listener of listeners)listener([...drafts.values()]);};
   const attachments: {reference:string;name:string;byteLength:number;mediaType:string|null;entry:unknown}[]=[];
   const methods={
@@ -29,7 +29,7 @@ export function draftBoundary(){
       if(refusal)return{outcome:'refused',rule:refusal};
       if(entries.some(entry=>drafts.get(entry.path)?.revision!==entry.revision))return{outcome:'refused',rule:'stale'};
       for(const entry of entries){const draft=drafts.get(entry.path)!;const creation=draft.parts.creation;
-        if(creation&&'fields' in creation){if(documents.some(doc=>doc.path===entry.path))return{outcome:'refused',rule:'exists'};documents.push({room:'r',path:entry.path,type:creation.type,fields:{...creation.fields},markdown:JSON.stringify(creation.fields)});}
+        if(creation&&'fields' in creation){if(documents.some(doc=>doc.path===entry.path))return{outcome:'refused',rule:'exists'};documents.push({room:'r',path:entry.path,type:creation.type,fields:{type:creation.type,...creation.fields},markdown:JSON.stringify(creation.fields)});}
         else {const doc=documents.find(doc=>doc.path===entry.path)!;for(const [key,part] of Object.entries(draft.parts.fields??{}))doc.fields[key]=part.value;doc.markdown=JSON.stringify(doc.fields);}
         drafts.delete(entry.path);
       }publish();return{outcome:'saved',identifier:'waiting-locally'};

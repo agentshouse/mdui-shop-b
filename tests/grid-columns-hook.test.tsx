@@ -1,0 +1,12 @@
+import {beforeEach,expect,it,vi} from 'vitest';
+import {act,renderHook} from '@testing-library/react';
+import {useState,useSyncExternalStore} from 'react';
+import {PersistedColumn} from '../src/donor/components/Datagrid/persistance/persistedColumn';
+import {useColumns} from '../src/donor/components/Datagrid/ColumnPicker/useColumns';
+const persistence=vi.hoisted(()=>({saved:[] as unknown[],updates:vi.fn(),listeners:new Set<()=>void>()}));
+vi.mock('../src/donor/components/Datagrid/persistance/usePersistance',()=>({usePersistance:()=>({columns:useSyncExternalStore(fn=>{persistence.listeners.add(fn);return()=>{persistence.listeners.delete(fn);};},()=>persistence.saved),update:(columns:unknown[])=>{persistence.saved=columns;persistence.updates(columns);persistence.listeners.forEach(fn=>fn());}})}));
+const columns=[{id:'reference',title:'Product',width:300},{id:'categoryName',title:'Category',width:150},{id:'price',title:'Price',width:150},{id:'stock',title:'Stock',width:110},{id:'sales',title:'Sold',width:110}];
+function useGrid(){const[selected,setSelected]=useState(columns.map(c=>c.id));return useColumns({gridName:'products',staticColumns:columns,selectedColumns:selected,onSave:setSelected,newColumnPosition:'end'});}
+beforeEach(()=>{persistence.saved=[];persistence.updates.mockClear();});
+it('preserves actual defined widths across first hide/show instead of inflating all columns to 200px',()=>{const{result}=renderHook(useGrid);expect(result.current.visibleColumns.map(c=>c.width)).toEqual([300,150,150,110,110]);act(()=>result.current.handlers.onToggle('sales'));expect(result.current.visibleColumns.map(c=>c.width)).toEqual([300,150,150,110]);act(()=>result.current.handlers.onToggle('sales'));expect(result.current.visibleColumns.map(c=>c.width)).toEqual([300,150,150,110,110]);expect((persistence.saved as PersistedColumn[]).map(c=>c.width)).toEqual([300,150,150,110,110]);});
+it('retains a user-resized column and its order across a subsequent toggle',()=>{const{result}=renderHook(useGrid);act(()=>result.current.handlers.onResize({...columns[0]},340));act(()=>result.current.handlers.onMove(2,1));expect(result.current.visibleColumns.map(c=>c.id)).toEqual(['reference','price','categoryName','stock','sales']);act(()=>result.current.handlers.onToggle('sales'));act(()=>result.current.handlers.onToggle('sales'));expect(result.current.visibleColumns.map(c=>c.id)).toEqual(['reference','price','categoryName','stock','sales']);expect(result.current.visibleColumns[0].width).toBe(340);});

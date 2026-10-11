@@ -66,3 +66,19 @@ it('does not submit an older draft when the latest local typing write failed',as
   await provider.update('categories',{id:data.id,previousData:data,data:prepared.data,meta:{houseDraft:prepared.reference}});
   expect((await provider.getOne('categories',{id:'category'})).data.name).toBe('Newest input');session.close();
 });
+
+it.each(['products','customers','categories'] as const)('opens a native fields-all %s row, preserves the discriminator in its CAS snapshot, and never edits it',async resource=>{
+ const{provider,documents,drafts}=draftBoundary();const doc=documents.find(d=>d.path.includes('/'+resource+'/'))!;const original=structuredClone(doc.fields);const{data}=await provider.getOne(resource,{id:doc.fields.id});
+ expect(data._house.fields.type).toBe(doc.type);const session=await provider.openDraft(resource,data,data);expect(session.values()).not.toHaveProperty('type');expect(session.values().id).toBe(doc.fields.id);
+ const key=resource==='products'?'reference':resource==='customers'?'first_name':'name';await session.write({[key]:'Native row edit'});const prepared=await session.prepare();expect(prepared.previousData?._house.fields).toEqual(original);expect(drafts.get(doc.path)?.parts.fields).not.toHaveProperty('type');expect(drafts.get(doc.path)?.parts.fields?.[key].base).toEqual({value:original[key]});
+ await provider.update(resource,{id:data.id,previousData:data,data:prepared.data,meta:{houseDraft:prepared.reference}});expect(doc.fields.type).toBe(original.type);expect(doc.fields[key]).toBe('Native row edit');session.close();
+});
+it('rejects an inconsistent discriminator instead of silently stripping it',async()=>{const{provider,documents}=draftBoundary();documents[1].fields.type='shop_customer';await expect(provider.getOne('products',{id:'product'})).rejects.toThrow('Mismatched products document type');});
+
+it('opens all six real donor resource shapes with native fields-all discriminators without changing data',async()=>{
+ const{readFileSync}=await import('node:fs');const{definitions,readShop}=await import('../src/house');const records=JSON.parse(readFileSync(new URL('../scripts/donor-demo/records.json',import.meta.url),'utf8'));const{provider,documents,methods}=draftBoundary();
+ const fullRows=Object.entries(records).flatMap(([resource,rows])=>(rows as Record<string,unknown>[]).map(row=>({room:'r',path:`shop/${resource}/${row.id}.md`,type:definitions[resource as keyof typeof definitions].type,fields:{type:definitions[resource as keyof typeof definitions].type,...Object.fromEntries(Object.entries(row).map(([key,value])=>[key,typeof value==='boolean'?String(value):value!=null&&typeof value==='object'?JSON.stringify(value):value]))},markdown:''})));
+ documents.splice(0,documents.length,...fullRows);const original=structuredClone(documents);const db=readShop({documents},'r');
+ for(const resource of Object.keys(definitions) as (keyof typeof definitions)[]){const row=db[resource][0];const session=await provider.openDraft(resource,row,row);expect(session.values().id).toBe(row.id);expect(session.values()).not.toHaveProperty('type');expect((await session.prepare()).previousData?._house.fields).toEqual(row._house.fields);session.close();}
+ expect(documents).toEqual(original);expect(methods.roomDraft.write).not.toHaveBeenCalled();expect(methods.save).not.toHaveBeenCalled();
+});

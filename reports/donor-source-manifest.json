@@ -1,0 +1,547 @@
+[
+  {
+    "path": "components/Card/index.ts",
+    "sha256": "c2b2e1522201cf6598f0a175606fb154b2a215f071387b9fafe822fedc161d02",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/index.ts"
+  },
+  {
+    "path": "components/Card/Subtitle.tsx",
+    "sha256": "21a3d36b263237bc6c1eeceede64e91869a7748954e183fa4a804de00734fee3",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/Subtitle.tsx"
+  },
+  {
+    "path": "components/Card/Header.tsx",
+    "sha256": "aab00f8757ec2b6354aa4086ebf9cb6d2baa3f5c956863d882a60a1d472dd3ab",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/Header.tsx"
+  },
+  {
+    "path": "components/Card/Title.tsx",
+    "sha256": "475fb3dca5a7121c04824d0c28e81064359ba9130150cf55051edc06a0d7fb71",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/Title.tsx"
+  },
+  {
+    "path": "components/Card/Toolbar.tsx",
+    "sha256": "cf3349723621d8b87e4ff6c356b14e1f2c07aa75eb721ca4b7435536a6b02498",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/Toolbar.tsx"
+  },
+  {
+    "path": "components/Card/Root.tsx",
+    "sha256": "9574652f13f2cb81efa661cb9c002d138e4fbc8f8e0f4856aa37e5f9f20e9723",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/Root.tsx"
+  },
+  {
+    "path": "components/Card/Actions.tsx",
+    "sha256": "20b4daaed418476e01b53b82661b1f18f56556058c4e634f0610ed72d4f3a2c9",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/Actions.tsx"
+  },
+  {
+    "path": "components/Card/Content.tsx",
+    "sha256": "a5928d4734d86b40cd70ec3b45b2c623664b04c73e41edbe8432aa3c24df8001",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Card/Content.tsx"
+  },
+  {
+    "path": "components/Table/Table.tsx",
+    "sha256": "a99c8689a09a3f57c4c2acf3f98071d0d8b925ec0904ba18e9e24403bef364ee",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Table/Table.tsx"
+  },
+  {
+    "path": "components/Table/Table.module.css",
+    "sha256": "98a19cc7c096cf2617ee441f0590e4317bae21782c6cd6777e670d022559713b",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Table/Table.module.css"
+  },
+  {
+    "path": "components/DetailSettingsCard/coerceHeaderEndActions.ts",
+    "sha256": "18d19de9e3e7eb1892a5379b2e7a6ccad6baaec31e0d54bbe9aee190237c0865",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/DetailSettingsCard/coerceHeaderEndActions.ts"
+  },
+  {
+    "path": "components/DetailSettingsCard/DetailSettingsCard.tsx",
+    "sha256": "22047734cf3f1c2df6f6cf6065e908bc969e195cf50051ae64d603f19454ca14",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/DetailSettingsCard/DetailSettingsCard.tsx"
+  },
+  {
+    "path": "components/DetailSettingsCard/DetailSettingsCard.module.css",
+    "sha256": "819b8b88a317bf95772b19a28dcc4c5c23b85f78589585ba656189491aa4c3a7",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/DetailSettingsCard/DetailSettingsCard.module.css"
+  },
+  {
+    "path": "components/DetailPageContent/DetailPageContent.tsx",
+    "sha256": "daec6f145d4a3bc2bd1fb7e305c166476e282b04d92ce652c51b6168b4dfd454",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/DetailPageContent/DetailPageContent.tsx"
+  },
+  {
+    "path": "components/DetailPageContent/DetailPageContent.module.css",
+    "sha256": "b5a7bdf5564645ffe0c081470470df279e4e6e31179ac3b72d7676591348045f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/DetailPageContent/DetailPageContent.module.css"
+  },
+  {
+    "path": "components/Layouts/Detail/index.ts",
+    "sha256": "c36384cec728cfd4c5f7b2c91203682deb2ef1eed4236ef38e42d63e7a7c0b5c",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Layouts/Detail/index.ts"
+  },
+  {
+    "path": "components/Layouts/Detail/RightSidebar.tsx",
+    "sha256": "75dfd68b910c1a35d2b2a22f5e3123a0051a55915cb2686c2c0fb1549d6f1d0f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Layouts/Detail/RightSidebar.tsx"
+  },
+  {
+    "path": "components/Layouts/Detail/Root.tsx",
+    "sha256": "81e0728837adac338ef8a6901c41e46e30234d301507867062b9b3aab5396d4b",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Layouts/Detail/Root.tsx"
+  },
+  {
+    "path": "components/Layouts/Detail/scrollElementIntoDetailContent.ts",
+    "sha256": "67b802cd02dfde45121af92115062ba61d64f74b03c81f079e0a057c27661a6f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Layouts/Detail/scrollElementIntoDetailContent.ts"
+  },
+  {
+    "path": "components/Layouts/Detail/Content.tsx",
+    "sha256": "84e4626c182dc234d85ecc991bbef061f4b49e967758d1f71027d73d9aea2a39",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Layouts/Detail/Content.tsx"
+  },
+  {
+    "path": "components/Layouts/List/Root.tsx",
+    "sha256": "2b66a1851c364a4e136edfc8ddc567c772345ae54384a5002271f0ad1ca0e73c",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Layouts/List/Root.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/Item.tsx",
+    "sha256": "898ac428ccca0d551c4d4d2d9c1c66735ed352e2e287915c3157183a93ecc71a",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/Item.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/ItemGroup.tsx",
+    "sha256": "3be4ffeec4583bd56144d1e75df06cc5d37554ffdeb4c0368669d9b44862ea17",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/ItemGroup.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/createCustomerTypeMenuItems.ts",
+    "sha256": "8f821fb263832d07d57467202b43619f361e3df89cb236a8839953abc37b136a",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/createCustomerTypeMenuItems.ts"
+  },
+  {
+    "path": "components/Sidebar/menu/types.ts",
+    "sha256": "a2a4ff1d008300f857e124ae1551ef742c48bac86d65f967c38eeebb8e2c54b9",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/types.ts"
+  },
+  {
+    "path": "components/Sidebar/menu/SubmenuSeparator.module.css",
+    "sha256": "9d3d9d8f988e795457fbc5a9cf3509e820fe5651a5e68103ead15da2ded8d4ff",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/SubmenuSeparator.module.css"
+  },
+  {
+    "path": "components/Sidebar/menu/Menu.tsx",
+    "sha256": "2fafa44b6ad6984a5cccd4414e1a9c63af9659b1ea7413468e96067f58e8937f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/Menu.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/settingsSubmenuItem.tsx",
+    "sha256": "4ec74648d8724c53991177604db3d67d0a0f74e67c8a3137eb0a404ebfc22088",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/settingsSubmenuItem.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/MenuItemLabel.tsx",
+    "sha256": "53c149285bc3600c617b98a3bd0923e09a36a94c112fa895e7f234466908316e",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/MenuItemLabel.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/SubmenuSeparator.tsx",
+    "sha256": "653a3b44f63d3c3363e08da91881a8f27dd4bdf7223db34736b6fd5b3e041a31",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/SubmenuSeparator.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/SingleItem.tsx",
+    "sha256": "bfbcbbf63bce88e3198394c9e74ed82dc7e26bb5a9bcff1b92ae8b8de1665be4",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/SingleItem.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/utils.ts",
+    "sha256": "9d7bed29b0c32c828f576cb401fec7781bc41866f532d4934d5ef57bcf59a8d0",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/utils.ts"
+  },
+  {
+    "path": "components/Sidebar/menu/Divider.tsx",
+    "sha256": "56528b89b69a9ffe45cddbfac33f849f031f375e2d62b70195772107bd358f05",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/Divider.tsx"
+  },
+  {
+    "path": "components/Sidebar/menu/hooks/useCustomerTypeMenuItems.ts",
+    "sha256": "e9e6f6d520356795c25781f469775e1b651d6c52a18b213e4bf2e861775198ad",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/hooks/useCustomerTypeMenuItems.ts"
+  },
+  {
+    "path": "components/Sidebar/menu/hooks/useEnvLink.ts",
+    "sha256": "99b6921ec8d1de78dba0b271395ea445645f79cde20e1b8f6a266ba854a521cc",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/hooks/useEnvLink.ts"
+  },
+  {
+    "path": "components/Sidebar/menu/hooks/useIsMenuActive.ts",
+    "sha256": "37b9692840f05050d66137299d1643372b02357830c69d3de86e75d47e2fb139",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/hooks/useIsMenuActive.ts"
+  },
+  {
+    "path": "components/Sidebar/menu/hooks/useMenuStructure.tsx",
+    "sha256": "0db9d22174ec27c9d52270c7cb2e7e7df00a1548b73b8543767808c0b29f272d",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/menu/hooks/useMenuStructure.tsx"
+  },
+  {
+    "path": "components/AppLayout/TopNav/index.ts",
+    "sha256": "4669143029f6df8952b3165a5f57f2678ad830d3208c0e7309b7b046a47eac71",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/index.ts"
+  },
+  {
+    "path": "components/AppLayout/TopNav/TopNavWrapper.module.css",
+    "sha256": "b5a7bdf5564645ffe0c081470470df279e4e6e31179ac3b72d7676591348045f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/TopNavWrapper.module.css"
+  },
+  {
+    "path": "components/AppLayout/TopNav/messages.ts",
+    "sha256": "aad4ed85a4a0251a91d7c00d46c67e0833caa1b55a9d00e7a7301b7ac75a7037",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/messages.ts"
+  },
+  {
+    "path": "components/AppLayout/TopNav/TopNavLink.tsx",
+    "sha256": "57c8d2594442c6282b50f41c1cfde908c648fe51fcf5b8b7f0772bdaa6b4c0b1",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/TopNavLink.tsx"
+  },
+  {
+    "path": "components/AppLayout/TopNav/destinationMessages.ts",
+    "sha256": "782eae7126ded582cf84a66f7ab739d64389c7135d92bfb33c77dc620955ee42",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/destinationMessages.ts"
+  },
+  {
+    "path": "components/AppLayout/TopNav/MetadataButton.tsx",
+    "sha256": "fcbd2c8c9e02734340afdea64b4c50c0f93932920735738add02918840f2bccd",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/MetadataButton.tsx"
+  },
+  {
+    "path": "components/AppLayout/TopNav/Root.tsx",
+    "sha256": "03600d8a2ba379ed256f894b2007c83363646b6c6bc8ce09997716e01445edc9",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/Root.tsx"
+  },
+  {
+    "path": "components/AppLayout/TopNav/destinationIcons.tsx",
+    "sha256": "55e527e4f590bd366e1b194c69fbf09d72d283cc4d356377655dfe13496041c5",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/destinationIcons.tsx"
+  },
+  {
+    "path": "components/AppLayout/TopNav/Menu.tsx",
+    "sha256": "83bca8ba7c37c260821666d65b60f2a05671070836d47fdbc4605c03b761bb7d",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/Menu.tsx"
+  },
+  {
+    "path": "components/AppLayout/TopNav/TopNavWrapper.tsx",
+    "sha256": "2e8191f52e1c8dfb66d1d6187635b9b22a30f2fc9091da64f12fccd82e77db70",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/TopNav/TopNavWrapper.tsx"
+  },
+  {
+    "path": "components/Savebar/Savebar.tsx",
+    "sha256": "1685350dcecfbed2e16623a116598c8128756e60be85c89c0fcbdbb2b1249240",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/Savebar.tsx"
+  },
+  {
+    "path": "components/Savebar/index.ts",
+    "sha256": "2df4f37756b676bb737b4603da329f1bbae6a7d0019474eb3ec187b5d328f56c",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/index.ts"
+  },
+  {
+    "path": "components/Savebar/SavebarReadOnlyLabel.tsx",
+    "sha256": "5b23c66f2ef3fe64f8d454d38859ecd972dafc19c022481f6a565cdc996490c4",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/SavebarReadOnlyLabel.tsx"
+  },
+  {
+    "path": "components/Savebar/SavebarActionButtons.tsx",
+    "sha256": "7f3e4a9537612f07005b49006cf9a40fccc9f623a30629f493aac327e3efb9b3",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/SavebarActionButtons.tsx"
+  },
+  {
+    "path": "components/Savebar/SavebarCompositionHint.tsx",
+    "sha256": "eb82b8471d724f368fa6aec2815571575c6c29628fb9f0e0ab4827a25e14aca2",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/SavebarCompositionHint.tsx"
+  },
+  {
+    "path": "components/Savebar/SavebarRefContext.tsx",
+    "sha256": "76ece97801c1f96462ddc3d03ee94156ab854524ddd04e5acb94b711dea8a5c7",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/SavebarRefContext.tsx"
+  },
+  {
+    "path": "components/Savebar/__mocks__/Savebar.tsx",
+    "sha256": "f4fe394630ee08e78a63ae797983de072c00d8a6d6c5d6ca01e67c4d753ad630",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/__mocks__/Savebar.tsx"
+  },
+  {
+    "path": "components/Savebar/__mocks__/index.ts",
+    "sha256": "2df4f37756b676bb737b4603da329f1bbae6a7d0019474eb3ec187b5d328f56c",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/__mocks__/index.ts"
+  },
+  {
+    "path": "components/Savebar/__mocks__/SavebarReadOnlyLabel.tsx",
+    "sha256": "ddc32b071851a415d3d8466a75c6dcf137cac3eccd90c49dc29c834948cfb151",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/__mocks__/SavebarReadOnlyLabel.tsx"
+  },
+  {
+    "path": "components/Savebar/__mocks__/SavebarActionButtons.tsx",
+    "sha256": "283fa2979cb2b21edb6ad2800ba74805a0e59241f802f68bf51317eb8b63a467",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Savebar/__mocks__/SavebarActionButtons.tsx"
+  },
+  {
+    "path": "components/ResponsiveTable/ResponsiveTable.module.css",
+    "sha256": "ca1e86d6a6147413dc9070cc486ad76321b263b5b9bb4ce195a9923978c998b9",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/ResponsiveTable/ResponsiveTable.module.css"
+  },
+  {
+    "path": "components/ResponsiveTable/ResponsiveTable.tsx",
+    "sha256": "fcd577788c6437b5834fdab643fb397c88bce605b3ba1b58a446d77862b50779",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/ResponsiveTable/ResponsiveTable.tsx"
+  },
+  {
+    "path": "components/ResponsiveTable/AGENTS.md",
+    "sha256": "a5809fc5dac62fed2d5a795f972e2081bab4f0d58edd7098e5b827731a9122a5",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/ResponsiveTable/AGENTS.md"
+  },
+  {
+    "path": "products/components/ProductTile/ProductTile.tsx",
+    "sha256": "22a75c7ecdc6dac692be866012922deadba66be0652c6e966ab9e23d5e5b0b09",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductTile/ProductTile.tsx"
+  },
+  {
+    "path": "products/components/ProductTile/utils.ts",
+    "sha256": "c0bcc4a3df2dd8395132a48362c3c566e4fc11fbc89a5397f09c0fad79af6be1",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductTile/utils.ts"
+  },
+  {
+    "path": "products/components/ProductListTiles/ProductListTiles.tsx",
+    "sha256": "96e353b068bdac93dfeb53c796bef7676d85422cf083c436206c3fa9a4cb4388",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductListTiles/ProductListTiles.tsx"
+  },
+  {
+    "path": "products/components/ProductListPage/filters.ts",
+    "sha256": "60059a6200e59e3fcedcea1f390f6203cad737a8edda990fa9a08787a724f23d",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductListPage/filters.ts"
+  },
+  {
+    "path": "products/components/ProductListPage/ProductListPage.tsx",
+    "sha256": "fe6abfc2e959df3c7177955e89d79a52e21c2280373b4c89d26d3df70a511db5",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductListPage/ProductListPage.tsx"
+  },
+  {
+    "path": "products/components/ProductListPage/utils.ts",
+    "sha256": "691bd814e7176d2148ec867d836c79e38f9db1d4656660df329e79b5eaed3251",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductListPage/utils.ts"
+  },
+  {
+    "path": "products/components/ProductDetailsForm/ProductDetailsForm.tsx",
+    "sha256": "b49870ffb82a2977cc3a3a32e4696e5edd9162af2d66d5c999faca032d2f8f23",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductDetailsForm/ProductDetailsForm.tsx"
+  },
+  {
+    "path": "products/components/ProductOrganization/ProductOrganization.tsx",
+    "sha256": "362212d05d784bdf879362a379f74dd1ad90710348e0f2e667d438f07fca640f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductOrganization/ProductOrganization.tsx"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/messages.ts",
+    "sha256": "c88a47888b82df85d8ed2ad89216356da2df43eb209d363338ca53421f8e6227",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/messages.ts"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/saveComposition.ts",
+    "sha256": "7ae9c92a258eb39251aed310f33dbe69e31e6409f22865648f41f54079c5f0f9",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/saveComposition.ts"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/Title.tsx",
+    "sha256": "e95507b8bee12a2f5437870930ad27e9a16c6d7d71c7ce75ae3477f66533bffc",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/Title.tsx"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/formChannels.ts",
+    "sha256": "f70a7f0e1dda62ff6c3b42b67925fd08da865414bfc06919122c7a1b030d96e4",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/formChannels.ts"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/types.ts",
+    "sha256": "76ae223dae9bd8ba01cdbe42488795d18746fce98c724454c506529a56852837",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/types.ts"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/ProductSaveCompositionHint.tsx",
+    "sha256": "6b8bf6b8b2e2c65f4dc2fab8e44db15d2ccdf4c443b878341d76a6ae85d81898",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/ProductSaveCompositionHint.tsx"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/ProductChannelsListingsDialog.tsx",
+    "sha256": "b76fc3cbab4b604cb709500acd00b6ebbf6e3053df9ad0975fb83ab7938844c7",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/ProductChannelsListingsDialog.tsx"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/form.tsx",
+    "sha256": "3c5489ce9c9e4ab33552be12f2d57a6dd51a7939289413d4931b8f194c287732",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/form.tsx"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/ProductSaveStepsBanner.tsx",
+    "sha256": "1a4a098da6edc6e43966f66b8ab03b01bce5b6bc93ec4d8d074da502294dca6f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/ProductSaveStepsBanner.tsx"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/ProductUpdatePage.tsx",
+    "sha256": "0a346c31f261d83e87087d1f4f2ebc8eb6f8a692ba45cc7119a4671055e0dd5c",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/ProductUpdatePage.tsx"
+  },
+  {
+    "path": "products/components/ProductUpdatePage/utils.ts",
+    "sha256": "26467cefe4ab34975592ae7a013d5584dd6c0cb27639f41ff3fc587163e75763",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductUpdatePage/utils.ts"
+  },
+  {
+    "path": "customers/components/CustomerInfo/messages.ts",
+    "sha256": "eab74c7f7a79f781c8d887a7914e427be15807e31ed2b12afa41125609d18fb3",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/customers/components/CustomerInfo/messages.ts"
+  },
+  {
+    "path": "customers/components/CustomerInfo/CustomerInfo.tsx",
+    "sha256": "8585bf6cc97023809d74a49c5903661ff08f499e43f4a39ed0accf2bfb2d65db",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/customers/components/CustomerInfo/CustomerInfo.tsx"
+  },
+  {
+    "path": "customers/components/CustomerListPage/filters.ts",
+    "sha256": "f650b898b725013b20adf3d280fa570da910073851d3b83d1982be528ee5592a",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/customers/components/CustomerListPage/filters.ts"
+  },
+  {
+    "path": "customers/components/CustomerListPage/CustomerListPage.tsx",
+    "sha256": "2af05dd04db434d3a4410b1fee218f8996aaee7d7e143c10c14d7c1e4f0776fc",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/customers/components/CustomerListPage/CustomerListPage.tsx"
+  },
+  {
+    "path": "orders/components/OrderListPage/filters.ts",
+    "sha256": "c6f7feb3851b4e2379a4b2cdb80ab941eb9bc72e0c2ab6dfe9c7e4598ec726ed",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderListPage/filters.ts"
+  },
+  {
+    "path": "orders/components/OrderListPage/OrderListPage.tsx",
+    "sha256": "a13c7fae573b96ab74356b248ebee553c1b4c91bbf1a6dcebdaaaac2a7970d8a",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderListPage/OrderListPage.tsx"
+  },
+  {
+    "path": "orders/components/OrderCustomer/messages.ts",
+    "sha256": "81669f53de56123a1561a3a83c9c677a3977432c734fc1dcbbfe0345309943ef",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderCustomer/messages.ts"
+  },
+  {
+    "path": "orders/components/OrderCustomer/AddressTextError.tsx",
+    "sha256": "1a064e30a0ec36755dff10adc337b3a3160677c3906bb07ab0b24df148d25d1b",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderCustomer/AddressTextError.tsx"
+  },
+  {
+    "path": "orders/components/OrderCustomer/CustomerEditForm.tsx",
+    "sha256": "a86ee50e81c6b172ea92b27295c5d4720831efc09aacbe801759d34a71056ff5",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderCustomer/CustomerEditForm.tsx"
+  },
+  {
+    "path": "orders/components/OrderCustomer/PickupLocation.tsx",
+    "sha256": "d483a3ec69fa0541a7c836f65f6f694092ef1074c50a3a1bf2aa5a87b87cd9f5",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderCustomer/PickupLocation.tsx"
+  },
+  {
+    "path": "orders/components/OrderCustomer/getCustomerEditDataFromOption.ts",
+    "sha256": "18f4576d37edb62479c14c962719fdc1a19aa0f528744cc0e1ae2464bec13b07",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderCustomer/getCustomerEditDataFromOption.ts"
+  },
+  {
+    "path": "orders/components/OrderCustomer/OrderCustomer.tsx",
+    "sha256": "dcf429efe91c8a95ca754f073c9374258e65106d69bc69dd43576547b6b3de8f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderCustomer/OrderCustomer.tsx"
+  },
+  {
+    "path": "components/RichTextEditor/consts.ts",
+    "sha256": "f7f6c5077785d9d8241c9714e1a231058d094473d4ecfb286a78cfc99fb3fc6e",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/consts.ts"
+  },
+  {
+    "path": "components/RichTextEditor/RichTextEditorLoading.tsx",
+    "sha256": "de107f76f69a5ac55677d55c53be0188a2c11283ad428acf8e95306a3aecc4d2",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/RichTextEditorLoading.tsx"
+  },
+  {
+    "path": "components/RichTextEditor/RichTextEditorContent.tsx",
+    "sha256": "93cdcb41f16eb5783ed05534eebabbfe9ad18d7bb48b4c6d578bb00bdda692fa",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/RichTextEditorContent.tsx"
+  },
+  {
+    "path": "components/RichTextEditor/ReactEditorJS.tsx",
+    "sha256": "0e6d73ef2f970252a89dd8584ad929925c25c0bd14d4dfb12531f4cc6c057b2b",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/ReactEditorJS.tsx"
+  },
+  {
+    "path": "components/RichTextEditor/RichTextEditor.tsx",
+    "sha256": "767fdb64701e38cbbe04514775c1d610413390ec49675e63212ad71396f36bca",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/RichTextEditor.tsx"
+  },
+  {
+    "path": "components/RichTextEditor/hooks.ts",
+    "sha256": "dc7aca0f0d57664d13812ca69b0abc30ec9287fe34e5ffc1549bba13aceca801",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/hooks.ts"
+  },
+  {
+    "path": "components/RichTextEditor/RichTextEditorClamp.module.css",
+    "sha256": "da9e2995dd8198c9bf695601174360d8b7f6c88d4ddf165e75986a353e7fdb54",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/RichTextEditorClamp.module.css"
+  },
+  {
+    "path": "components/RichTextEditor/utils.ts",
+    "sha256": "9ca79049e372c240d1fd10940f8a301d674c54598fd5bdf4206136f9a96394f3",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/utils.ts"
+  },
+  {
+    "path": "components/RichTextEditor/RichTextEditorClamp.tsx",
+    "sha256": "6b321b3969eba7530f17fa9cfa0dd23df654a94f3605f930403abce54701d026",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/RichTextEditorClamp.tsx"
+  },
+  {
+    "path": "components/RichTextEditor/styles.ts",
+    "sha256": "ba1041e85874ba1175776e9a7223c47bab23f47e651995b623349acbe7f7fa26",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/RichTextEditor/styles.ts"
+  },
+  {
+    "path": "products/components/ProductListViewSwitch/ProductListViewSwitch.module.css",
+    "sha256": "cf8de2fadc434c33d13f17dcf86ce3f97f1fb2cbf7c71d61b5fcea87210e3753",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductListViewSwitch/ProductListViewSwitch.module.css"
+  },
+  {
+    "path": "products/components/ProductListViewSwitch/ProductListViewSwitch.tsx",
+    "sha256": "000224ed7605030c21e3195c4505604161cc4ee73509c2c269bf8471d661a83f",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/products/components/ProductListViewSwitch/ProductListViewSwitch.tsx"
+  },
+  {
+    "path": "orders/components/OrderDetailsPage/OrderDetailsPage.tsx",
+    "sha256": "be0a1290a47aacda663ee3e69704d167d5468469ef5ee4ef122b9399a27162b3",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/orders/components/OrderDetailsPage/OrderDetailsPage.tsx"
+  },
+  {
+    "path": "customers/components/CustomerDetailsPage/CustomerDetailsPage.tsx",
+    "sha256": "210978f27d7b2072f3960a7445f1993e80a61a7ad25056a1f543f5c5dece91cb",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/customers/components/CustomerDetailsPage/CustomerDetailsPage.tsx"
+  },
+  {
+    "path": "components/Sidebar/Content.tsx",
+    "sha256": "9e451e03fc580b18102395b7682462211bcbf956a9d26422694ce5605df52874",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/Content.tsx"
+  },
+  {
+    "path": "components/Sidebar/Sidebar.tsx",
+    "sha256": "053ab626937a4d08693d13502fefc34814d66ede52d08d579b2601d35f129be9",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/Sidebar/Sidebar.tsx"
+  },
+  {
+    "path": "components/AppLayout/consts.ts",
+    "sha256": "116d969c6861113963025428959a994f0cc56ba54f90ddbe51758e35a2d9e043",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/AppLayout/consts.ts"
+  },
+  {
+    "path": "components/icons/index.ts",
+    "sha256": "c90b1fcf3d804b6804ca6de650e15051246a26fd037a962b1fc018b11e036911",
+    "source": "https://github.com/saleor/saleor-dashboard/blob/8b0e4c9875779dd5395c243f50ab31abb0616c84/src/components/icons/index.ts"
+  }
+]

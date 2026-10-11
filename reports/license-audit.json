@@ -1,0 +1,305 @@
+{
+  "packages": [
+    {
+      "name": "@agentshouse/app-bridge",
+      "version": "0.1.0-ce524f6608238",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.10",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@editorjs/editorjs",
+      "version": "2.30.7",
+      "license": "Apache-2.0",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@editorjs/header",
+      "version": "2.8.8",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@editorjs/list",
+      "version": "2.0.8",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@editorjs/paragraph",
+      "version": "2.11.7",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@editorjs/quote",
+      "version": "2.7.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@formatjs/ecma402-abstract",
+      "version": "1.11.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "@formatjs/fast-memoize",
+      "version": "1.2.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "@formatjs/icu-messageformat-parser",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "@formatjs/icu-skeleton-parser",
+      "version": "1.3.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "@formatjs/intl",
+      "version": "2.2.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "license": "MIT",
+      "files": []
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.10",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "license": "MIT",
+      "files": []
+    },
+    {
+      "name": "@saleor/macaw-ui",
+      "version": "1.4.2",
+      "license": "CC-BY-4.0",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ]
+    },
+    {
+      "name": "dompurify",
+      "version": "3.4.8",
+      "license": "(MPL-2.0 OR Apache-2.0)",
+      "files": [
+        "LICENSE",
+        "LICENSE-MPL"
+      ]
+    },
+    {
+      "name": "history",
+      "version": "4.10.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "hoist-non-react-statics",
+      "version": "3.3.2",
+      "license": "BSD-3-Clause",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "react-is",
+      "version": "16.13.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "intl-messageformat",
+      "version": "9.13.0",
+      "license": "BSD-3-Clause",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "isarray",
+      "version": "0.0.1",
+      "license": "MIT",
+      "files": []
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.555.0",
+      "license": "ISC",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "path-to-regexp",
+      "version": "1.9.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "react-intl",
+      "version": "5.25.1",
+      "license": "BSD-3-Clause",
+      "files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "react-router",
+      "version": "5.3.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "react-router-dom",
+      "version": "5.3.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "react-is",
+      "version": "16.13.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "resolve-pathname",
+      "version": "3.0.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "tiny-invariant",
+      "version": "1.3.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "license": "0BSD",
+      "files": [
+        "CopyrightNotice.txt",
+        "LICENSE.txt"
+      ]
+    }
+  ],
+  "missing": []
+}

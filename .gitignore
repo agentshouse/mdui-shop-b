@@ -1,0 +1,5 @@
+node_modules/
+dist/
+reports/bundle-modules.json
+reports/gates*.log
+reports/*.log

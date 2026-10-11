@@ -1,0 +1,6 @@
+{
+  "version": "1.4.2",
+  "original_sha256": "012e3ff909a0e9d3c7c1a1a53d861457abc36672e4f87a5b969947e024704d28",
+  "modified_sha256": "32ac24aa8fdd3545b3c18bd785df62806c1493f0462a68aa0387809495249ea1",
+  "modification": "Remove all font-face declarations; use system font stack. All other CSS retained."
+}

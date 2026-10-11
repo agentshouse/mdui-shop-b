@@ -1,0 +1,3 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+for(const file of ['app.json','schema.yaml'])fs.copyFileSync(file,`public/${file}`);
+const evidence=JSON.parse(fs.readFileSync('reports/macaw-style-adaptation.json','utf8'));const source=fs.readFileSync('node_modules/@saleor/macaw-ui-next/dist/style.css','utf8');assert.equal(createHash('sha256').update(source).digest('hex'),evidence.original_sha256);const adapted=source.replace(/@font-face\{[^}]*\}/g,'');assert.equal(createHash('sha256').update(adapted).digest('hex'),evidence.modified_sha256);assert.equal(fs.readFileSync('src/macaw-system.css','utf8'),adapted);

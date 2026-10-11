@@ -1,0 +1,11 @@
+import {useEffect,useRef,useState} from 'react';
+import {useShop} from './context';
+import type {ShopFormDraft,ShopResource} from './house';
+import type {Row} from './store';
+export function useDraft(resource:ShopResource,row:Row|undefined,initial:Record<string,unknown>={}){
+ const{store,ready,outcomes}=useShop();const[values,setValues]=useState<Record<string,any>>(row??initial);const[error,setError]=useState('');const[status,setStatus]=useState('Opening local draft…');const[session,setSession]=useState<ShopFormDraft>();const[saving,setSaving]=useState(false);const[savedPath,setSavedPath]=useState('');const flush=useRef<(()=>Promise<void>)|undefined>();const edits=useRef(Promise.resolve());const lastFailure=useRef(false);
+ useEffect(()=>{let active=true;let held:ShopFormDraft|undefined;void store.openDraft(resource,row,initial).then(s=>{held=s;if(!active){s.close();return;}setSession(s);setValues(s.values());s.subscribe(v=>{if(active)setValues(v);});setStatus('');}).catch(e=>{if(active)setError(String(e.message??e));});return()=>{active=false;held?.close();};},[store,resource,row?.id]);
+ const change=(patch:Record<string,unknown>)=>{setValues(v=>({...v,...patch}));setStatus('Storing local draft…');setError('');const job=edits.current.catch(()=>undefined).then(async()=>{if(!session)throw new Error('The local draft is not ready.');await store.stage(session,patch);lastFailure.current=false;setStatus('Draft kept on this device.');}).catch(e=>{lastFailure.current=true;setError(`${e.message??e} Your latest input has not been stored.`);throw e;});edits.current=job;void job.catch(()=>undefined);};
+ const save=async()=>{if(!session||saving)return;setSaving(true);setError('');try{await flush.current?.();await edits.current;if(lastFailure.current)throw new Error('The latest input is not stored. Retry the field before Save.');const result=await store.save(resource,session);setSavedPath(result._house?.path??'');setStatus('Queued locally; waiting for House.');return result;}catch(e:any){setError(e.message??String(e));}finally{setSaving(false);}};
+ const path=row?._house?.path||savedPath;return{values,change,save,flush,disabled:!ready||!session||saving,error,status:path&&outcomes[path]?outcomes[path]:status,saving};
+}

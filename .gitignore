@@ -1,5 +1,8 @@
 node_modules/
 dist/
-reports/bundle-modules.json
-reports/gates*.log
-reports/*.log
+.build/
+*.log
+reports/
+seed-changes.json
+tax-correction.json
+test-results.json

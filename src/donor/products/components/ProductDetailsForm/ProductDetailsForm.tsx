@@ -4,14 +4,14 @@ import {parseBusinessNumber} from '../../../../numbers';
 import {DetailSettingsCard} from '@dashboard/components/DetailSettingsCard/DetailSettingsCard';
 import RichTextEditor from '@dashboard/components/RichTextEditor/RichTextEditor';
 import {Box,Input} from '@saleor/macaw-ui-next';
-import {useMemo,useRef,useEffect,type MutableRefObject} from 'react';
-import type {EditorCore} from '@react-editor-js/core';
-import {descriptionBlocks,blocksDescription} from '../../../../description';
+import {useEffect,type MutableRefObject} from 'react';
+import {useRichDescriptionDraft} from '../../../../useRichDescriptionDraft';
 export function ProductDetailsForm({data,disabled,onChange,flush}:{data:Record<string,any>;disabled:boolean;flush:MutableRefObject<(()=>Promise<void>)|undefined>;onChange:(patch:Record<string,unknown>)=>void}){
- const editorRef=useRef<EditorCore|null>(null);const lastWritten=useRef(data.description??'');const touched=useRef(false);const initial=useMemo(()=>descriptionBlocks(data.description??''),[]);useEffect(()=>{flush.current=async()=>{if(touched.current&&editorRef.current){const value=blocksDescription(await editorRef.current.save());lastWritten.current=value;onChange({description:value});}};return()=>{flush.current=undefined;};},[flush,onChange]);useEffect(()=>{if(data.description!==lastWritten.current){lastWritten.current=data.description??'';void editorRef.current?.render(descriptionBlocks(data.description??''));}},[data.description]);
+ const description=useRichDescriptionDraft(data.description??'',onChange);
+ useEffect(()=>{flush.current=description.flush;return()=>{flush.current=undefined;};},[flush,description.flush]);
  return <DetailSettingsCard title="General information" data-test-id="product-general-settings"><Box display="flex" flexDirection="column" gap={5}>
  <Input label="Product reference" size="small" value={data.reference??''} name="reference" disabled={disabled} onChange={e=>onChange({reference:e.target.value})}/>
- <RichTextEditor editorRef={editorRef} defaultValue={initial} onFocus={()=>{touched.current=true;}} onChange={v=>{if(v&&touched.current){const value=blocksDescription(v);lastWritten.current=value;onChange({description:value});}}} disabled={disabled} error={false} label="Description" name="description"/>
+ <RichTextEditor editorRef={description.editorRef} defaultValue={description.initial} onReady={description.onReady} onFocus={description.onFocus} onInputCapture={description.onInputCapture} onKeyDownCapture={description.onKeyDownCapture} onPointerDownCapture={description.onPointerDownCapture} onChange={description.onChange} captureChange={description.captureChange} disabled={disabled||description.disabled} error={Boolean(description.error)} helperText={description.error} label="Description" name="description"/>
  <Box display="grid" __gridTemplateColumns="1fr 1fr" gap={4}><Input label="Width (cm)" value={String(data.width??'')} onChange={e=>onChange({width:parseBusinessNumber(e.target.value)})} type="text" inputMode="decimal" disabled={disabled}/><Input label="Height (cm)" value={String(data.height??'')} onChange={e=>onChange({height:parseBusinessNumber(e.target.value)})} type="text" inputMode="decimal" disabled={disabled}/></Box>
  </Box></DetailSettingsCard>;
 }

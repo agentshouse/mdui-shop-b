@@ -1,15 +1,15 @@
 // Adapted from Saleor Dashboard hooks/usePointerDragClickGuard.test.tsx at
 // 8b0e4c9875779dd5395c243f50ab31abb0616c84; BSD-3-Clause (see ../LICENSE).
-import { describe, expect, it, vi, type Mock } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { fireEvent, render } from "@testing-library/react";
 import { type MouseEventHandler, type PointerEventHandler, type ReactElement } from "react";
 
 import { usePointerDragClickGuard } from "../src/donor/components/Datagrid/hooks/usePointerDragClickGuard";
 
 interface GuardHarnessProps {
-  onCellClick?: Mock;
-  onClick: Mock;
-  onDrag: Mock;
+  onCellClick?: () => void;
+  onClick: () => void;
+  onDrag: () => void;
 }
 
 const GuardHarness = ({ onCellClick, onClick, onDrag }: GuardHarnessProps): ReactElement => {

@@ -22,9 +22,13 @@ export interface RichTextEditorProps extends Omit<EditorJsProps, "onChange"> {
   editorRef: React.RefCallback<EditorCore> | React.MutableRefObject<EditorCore | null> | null;
   // onChange with value shouldn't be used due to issues with React and EditorJS integration
   onChange?: (data?: OutputData) => void;
+  /** Optional native-Draft delivery guard, captured before the asynchronous read. */
+  captureChange?: () => ((data: OutputData) => boolean) | null;
   onBlur?: () => void;
   onFocus?: () => void;
   onKeyDownCapture?: React.KeyboardEventHandler<HTMLDivElement>;
+  onInputCapture?: React.FormEventHandler<HTMLDivElement>;
+  onPointerDownCapture?: React.PointerEventHandler<HTMLDivElement>;
   /** Parent frame (RichTextEditorClamp) owns the field border. */
   framed?: boolean;
 }
@@ -39,9 +43,12 @@ const RichTextEditor = ({
   editorRef,
   onInitialize,
   onChange,
+  captureChange,
   onBlur,
   onFocus,
   onKeyDownCapture,
+  onInputCapture,
+  onPointerDownCapture,
   framed = false,
   ...props
 }: RichTextEditorProps) => {
@@ -55,17 +62,24 @@ const RichTextEditor = ({
   const [hasValue, setHasValue] = React.useState(false);
   const isTyped = Boolean(hasValue || isFocused);
   const onChangeRef = React.useRef(onChange);
+  const captureChangeRef = React.useRef(captureChange);
 
   onChangeRef.current = onChange;
+  captureChangeRef.current = captureChange;
 
   // Editor.js is constructed once and freezes this callback. Always read the latest onChange.
   const handleEditorChange = React.useCallback(
     async (api: { saver: { save: () => Promise<OutputData> } }) => {
+      const capture = captureChangeRef.current;
+      const deliver = capture?.();
+      if (capture && !deliver) return;
       const editorJsValue = await api.saver.save();
+
+      if (deliver && !deliver(editorJsValue)) return;
 
       setHasValue(editorJsValue.blocks.length > 0);
 
-      return onChangeRef.current?.(editorJsValue);
+      if (!capture) return onChangeRef.current?.(editorJsValue);
     },
     [],
   );
@@ -151,6 +165,8 @@ const RichTextEditor = ({
               onBlur?.();
             }}
             onKeyDownCapture={onKeyDownCapture}
+            onInputCapture={onInputCapture}
+            onPointerDownCapture={onPointerDownCapture}
           />
         </ReactEditorJS>
       )}

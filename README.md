@@ -1,23 +1,13 @@
-# Shop admin
+# Shop B
 
-Products and orders of an online shop in spreadsheet-like tables.
+A local-first shop administration App for products, categories, customers, orders and invoices stored in a House Room. Edits use native drafts and explicit saves. No live payment, email or fulfillment service is connected.
 
-An [agents.house](https://agents.house) Template: an App over one Room. `schema.yaml` is
-the Room's schema, `starter/` holds the documents a new Room starts with and `demo/` the
-documents of its demo Site.
+## Build and publish
 
-## Build
+Use Node.js 24.21 or later and `npm ci`. Run `npm run verify` for type checking, lint, regression tests, build, release and startup checks. `npm run publish` requires a clean committed `main` branch and a House App HTTPS `origin`; it verifies the exact source, then atomically publishes source and a parentless release.
 
-```sh
-npm ci
-npm run build
-```
+The tracked `.npmrc` sets `legacy-peer-deps=true`, matching the pinned donor dependency tree in `package-lock.json`. Saleor's retained Material UI 4 components declare React 16/17 peers, while this App uses React 18; its retained react-intl 5 dependencies also declare older TypeScript peers. This project-local setting makes plain `npm ci` reproducible without user/global npm configuration or changing the lockfile. Keep the full verification gate: this setting does not establish compatibility by itself. Remove it only as part of a tested donor dependency migration.
 
-## Publish
+`starter/` contains one existing category, product and fictional customer. Image fields are omitted because Template starters are text-only. Missing media uses a plain placeholder. Both Shop siblings share the same schema and starter documents.
 
-Commit your change, then run `npm run publish`. It builds, then pushes `main` and the build,
-as one new commit without parents on `release`, to `origin`.
-
-## License
-
-See the license files beside this README.
+License texts and required attribution are retained in the repository and generated release notices.

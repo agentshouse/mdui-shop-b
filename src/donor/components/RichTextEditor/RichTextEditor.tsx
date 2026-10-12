@@ -28,6 +28,7 @@ export interface RichTextEditorProps extends Omit<EditorJsProps, "onChange"> {
   onFocus?: () => void;
   onKeyDownCapture?: React.KeyboardEventHandler<HTMLDivElement>;
   onInputCapture?: React.FormEventHandler<HTMLDivElement>;
+  onPasteCapture?: React.ClipboardEventHandler<HTMLDivElement>;
   onPointerDownCapture?: React.PointerEventHandler<HTMLDivElement>;
   /** Parent frame (RichTextEditorClamp) owns the field border. */
   framed?: boolean;
@@ -48,6 +49,7 @@ const RichTextEditor = ({
   onFocus,
   onKeyDownCapture,
   onInputCapture,
+  onPasteCapture,
   onPointerDownCapture,
   framed = false,
   ...props
@@ -166,6 +168,7 @@ const RichTextEditor = ({
             }}
             onKeyDownCapture={onKeyDownCapture}
             onInputCapture={onInputCapture}
+            onPasteCapture={onPasteCapture}
             onPointerDownCapture={onPointerDownCapture}
           />
         </ReactEditorJS>

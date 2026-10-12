@@ -6,7 +6,7 @@ import {blocksDescription,descriptionBlocks} from './description';
 /** Synchronize a native Draft with EditorJS only after its actual ready event.
  * Rendering incoming content never writes it back or normalizes the stored raw
  * source. New user edits invalidate any older, not-yet-applied hydration. */
-type RichDescriptionDraft={editorRef:MutableRefObject<EditorCore|null>;initial:OutputData;onReady:()=>void;onFocus:()=>void;onInputCapture:()=>void;onKeyDownCapture:KeyboardEventHandler<HTMLDivElement>;onPointerDownCapture:PointerEventHandler<HTMLDivElement>;onChange:(data?:OutputData)=>void;captureChange:()=>((data:OutputData)=>boolean)|null;flush:()=>Promise<void>;disabled:boolean;error:string};
+type RichDescriptionDraft={editorRef:MutableRefObject<EditorCore|null>;initial:OutputData;onReady:()=>void;onFocus:()=>void;onInputCapture:()=>void;onPasteCapture:()=>void;onKeyDownCapture:KeyboardEventHandler<HTMLDivElement>;onPointerDownCapture:PointerEventHandler<HTMLDivElement>;onChange:(data?:OutputData)=>void;captureChange:()=>((data:OutputData)=>boolean)|null;flush:()=>Promise<void>;disabled:boolean;error:string};
 export function useRichDescriptionDraft(description:string,onChange:(patch:Record<string,unknown>)=>void):RichDescriptionDraft{
   const editorRef=useRef<EditorCore|null>(null);
   const initial=useMemo(()=>descriptionBlocks(description),[]);
@@ -75,6 +75,9 @@ export function useRichDescriptionDraft(description:string,onChange:(patch:Recor
     focused.current=true;pendingDomInput.current=true;
     generation.current++;readSequence.current++;
   },[]);
+  // EditorJS prevents native multi-block paste input and inserts blocks itself.
+  // A paste event therefore carries user intent even without keydown or input.
+  const onPasteCapture=onInputCapture;
   // Capture before RichTextEditor awaits saver.save(). A stale asynchronous
   // callback must not gain authority again just because render() has finished.
   const captureChange=useCallback(()=>{
@@ -113,5 +116,5 @@ export function useRichDescriptionDraft(description:string,onChange:(patch:Recor
   const onPointerDownCapture:PointerEventHandler<HTMLDivElement>=event=>{
     if(event.target instanceof Element&&event.target.closest('button,[role="button"],.ce-toolbar__plus,.ce-toolbar__settings-btn,.ce-popover-item,.ce-inline-tool,.ce-toolbox__button'))onInputCapture();
   };
-  return{editorRef,initial,onReady,onFocus:()=>{focused.current=true;},onInputCapture,onKeyDownCapture,onPointerDownCapture,onChange:(data?:OutputData)=>{if(data)acceptUserValue(data);},captureChange,flush,disabled:!isReady||hydrating||Boolean(error),error};
+  return{editorRef,initial,onReady,onFocus:()=>{focused.current=true;},onInputCapture,onPasteCapture,onKeyDownCapture,onPointerDownCapture,onChange:(data?:OutputData)=>{if(data)acceptUserValue(data);},captureChange,flush,disabled:!isReady||hydrating||Boolean(error),error};
 }

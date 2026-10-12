@@ -1,7 +1,7 @@
-import { connectHouseBridge } from "@agentshouse/app-bridge";
+import { houseBridge as getHouseBridge } from "@agentshouse/app-bridge";
 import type { DataProvider, Identifier, RaRecord } from "./provider-types";
 import { isAttachmentReference, posterChoices } from "./assets";
-export type HouseRuntime = Awaited<ReturnType<typeof connectHouseBridge>["runtime"]>;
+export type HouseRuntime = Awaited<ReturnType<typeof getHouseBridge>["runtime"]>;
 export type HouseRoom = Awaited<ReturnType<HouseRuntime["rooms"]>>[number];
 export type MutationStatus = {
   phase: "saving" | "queued" | "error" | "idle";
@@ -104,8 +104,8 @@ function validId(value: unknown): string {
   return String(value);
 }
 let connection: Promise<HouseRuntime> | undefined;
-let bridgeClient: ReturnType<typeof connectHouseBridge> | undefined;
-export function houseBridge(){return bridgeClient ??= connectHouseBridge();}
+let bridgeClient: ReturnType<typeof getHouseBridge> | undefined;
+export function houseBridge(){const bridge=bridgeClient ??= getHouseBridge();if(!bridge)throw new Error("house_bridge_absent");return bridge;}
 export function houseRuntime(): Promise<HouseRuntime> {
   connection ??= (async () => {
     const bridge = houseBridge();

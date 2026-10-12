@@ -31,10 +31,10 @@ beforeEach(()=>{
 afterEach(()=>vi.unstubAllGlobals());
 function native(){
   const adapter=createMemoryAdapter({rooms:[{
-    locator:room,name:'Native fixture',roomVersion:'1',
+    locator:room,handle:'native-shop-description',name:'Native fixture',roomVersion:'1',
     operations:{read:[''],sync:[''],write:[''],delete:['']},
     replica:{selection:'all',admission:'admitted'},providerOwnedPaths:[],
-    model:{kind:'model',snapshot:{identity:'fixture-model',version:'1',schema}},
+    model:{kind:'model',snapshot:{identity:'fixture-model',version:'1',revision:'fixture-schema-1',schema}},
     documents:{'shop/categories/donor-0.md':category,'shop/products/donor-0.md':product},
   }]});
   const host=serveMdRuntime({adapter,shell:{

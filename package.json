@@ -18,7 +18,7 @@
     "test:publisher": "node --test scripts/publish-regression.mjs"
   },
   "dependencies": {
-    "@agentshouse/app-bridge": "0.1.0-ce524f6608238",
+    "@agentshouse/app-bridge": "0.1.0-ca4ec913df08d",
     "@editorjs/editorjs": "2.30.7",
     "@editorjs/header": "2.8.8",
     "@editorjs/list": "2.0.8",

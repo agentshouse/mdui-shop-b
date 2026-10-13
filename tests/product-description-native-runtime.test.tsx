@@ -15,8 +15,8 @@ import type {HouseRuntime} from '../src/house';
 // IndexedDB and the provider's remote data are replaced with test implementations.
 // This exercises native Draft persistence/reopening, not hosted-browser acceptance.
 const schema=readFileSync('schema.yaml','utf8');
-const category=readFileSync('starter/shop/categories/donor-0.md','utf8');
-const product=readFileSync('starter/shop/products/donor-0.md','utf8');
+const category=readFileSync('starter/shop/categories/first.md','utf8');
+const product=readFileSync('starter/shop/products/first.md','utf8');
 const room='native-shop-description';
 const paragraphs=[
   'Utrimque video defetiscor circumvenio. Adinventitias auctor vivo harum arcesso culpo. Patria praesentium tego adimpleo.',
@@ -35,7 +35,7 @@ function native(){
     operations:{read:[''],sync:[''],write:[''],delete:['']},
     replica:{selection:'all',admission:'admitted'},providerOwnedPaths:[],
     model:{kind:'model',snapshot:{identity:'fixture-model',version:'1',revision:'fixture-schema-1',schema}},
-    documents:{'shop/categories/donor-0.md':category,'shop/products/donor-0.md':product},
+    documents:{'shop/categories/first.md':category,'shop/products/first.md':product},
   }]});
   const host=serveMdRuntime({adapter,shell:{
     persistentStorage:true,generation,
@@ -55,7 +55,7 @@ it.each([['new','input'],['reopened','input'],['new','paste'],['reopened','paste
     if(state==='reopened'){
       await store.start();await waitFor(()=>expect(store.snapshot().ready).toBe(true));
       const seed=await store.openDraft('products',undefined,{
-        reference:'QA real runtime draft',category_id:'donor-0',description:'',
+        reference:'QA real runtime draft',category_id:'first',description:'',
         width:29.01,height:27.38,price:46.55,stock:0,image:'',thumbnail:'',
       });
       await store.stage(seed,{reference:'QA real runtime draft'});seed.close();store.stop();

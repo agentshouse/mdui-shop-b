@@ -44,14 +44,14 @@ it('allows local draft typing and Save during provider halt but preserves lost-r
 it('validates image references against local Room metadata without a Provider Action, including while write-halted',async()=>{
   const {provider,methods,drafts,attachments}=draftBoundary();
   const first=await provider.openDraft('products',undefined,productInput);
-  await first.write({image:'at_declared',thumbnail:'at_declared'});
+  await first.write({image:'images/declared.jpg',thumbnail:'images/declared.jpg'});
   const prepared=await first.prepare();
   await expect(provider.create('products',{data:prepared.data,meta:{houseDraft:prepared.reference}})).rejects.toThrow('not declared in the selected Room');
   expect(drafts.size).toBe(1);expect(methods.save).not.toHaveBeenCalled();expect(methods.call).not.toHaveBeenCalled();
-  attachments.push({reference:'at_declared',name:'poster.jpg',byteLength:128,mediaType:'image/jpeg',entry:{}});
+  attachments.push({reference:'images/declared.jpg',name:'poster.jpg',byteLength:128,mediaType:'image/jpeg',entry:{}});
   const result=await provider.create('products',{data:prepared.data,meta:{houseDraft:prepared.reference}});
-  expect(result.data.image).toBe('at_declared');expect(methods.save).toHaveBeenCalledWith('r',[prepared.reference]);
-  expect(methods.rooms).toHaveBeenCalledTimes(2);expect(methods.call).not.toHaveBeenCalled();expect(drafts.size).toBe(0);first.close();
+  expect(result.data.image).toBe('images/declared.jpg');expect(methods.save).toHaveBeenCalledWith('r',[prepared.reference]);
+  expect(methods.query).toHaveBeenCalledWith({rooms:['r'],pathPrefix:'images',select:'all'});expect(methods.call).not.toHaveBeenCalled();expect(drafts.size).toBe(0);first.close();
 });
 
 it('does not submit an older draft when the latest local typing write failed',async()=>{
@@ -76,7 +76,7 @@ it.each(['products','customers','categories'] as const)('opens a native fields-a
 it('rejects an inconsistent discriminator instead of silently stripping it',async()=>{const{provider,documents}=draftBoundary();documents[1].fields.type='shop_customer';await expect(provider.getOne('products',{id:'product'})).rejects.toThrow('Mismatched products document type');});
 
 it('opens all six real donor resource shapes with native fields-all discriminators without changing data',async()=>{
- const{readFileSync}=await import('node:fs');const{definitions,readShop}=await import('../src/house');const records=JSON.parse(readFileSync(new URL('./support/donor-demo/records.json',import.meta.url),'utf8'));const{provider,documents,methods}=draftBoundary();
+ const{definitions,readShop}=await import('../src/house');const {binaryRecords:records}=await import('./support/binary-records');const{provider,documents,methods}=draftBoundary();
  const fullRows=Object.entries(records).flatMap(([resource,rows])=>(rows as Record<string,unknown>[]).map(row=>({room:'r',path:`shop/${resource}/${row.id}.md`,type:definitions[resource as keyof typeof definitions].type,fields:{type:definitions[resource as keyof typeof definitions].type,...Object.fromEntries(Object.entries(row).map(([key,value])=>[key,typeof value==='boolean'?String(value):value!=null&&typeof value==='object'?JSON.stringify(value):value]))},markdown:''})));
  documents.splice(0,documents.length,...fullRows);const original=structuredClone(documents);const db=readShop({documents},'r');
  for(const resource of Object.keys(definitions) as (keyof typeof definitions)[]){const row=db[resource][0];const session=await provider.openDraft(resource,row,row);expect(session.values().id).toBe(row.id);expect(session.values()).not.toHaveProperty('type');expect((await session.prepare()).previousData?._house.fields).toEqual(row._house.fields);session.close();}
